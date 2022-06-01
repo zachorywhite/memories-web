@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
     appBar: {
         borderRadius: 15,
         margin: '30px 0',
@@ -9,10 +9,15 @@ export default makeStyles(() => ({
         justifyContent: 'center',
         alignItems: 'center',
       },
-      heading: {
+    heading: {
         color: '#cc5577',
       },
-      image: {
+    image: {
         marginLeft: '15px',
       },
+    root: {
+      "@media (min-width: 1280px)": {
+        'max-width': '100%',
+      }
+    }
 }));

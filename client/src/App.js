@@ -7,12 +7,15 @@ import Home from './components/Home/Home';
 import Auth from './components/Auth/Auth';
 import PostDetails from './components/PostDetails/PostDetails';
 
+import useStyles from './styles'
+
 const App = () => {
     const user = JSON.parse(localStorage.getItem('profile'));
+    const classes = useStyles();
 
     return(
         <BrowserRouter>
-            <Container maxwidth="xl">
+            <Container maxwidth="xl" className={classes.root}>
                 <Navbar/>
                 <Switch>
                     <Route path="/" exact component={() => <Redirect to="/posts"/>} />
